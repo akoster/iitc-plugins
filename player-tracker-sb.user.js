@@ -4,8 +4,8 @@
 // @category       Layer
 // @version        0.11.1.20170108.21732
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL
-// @downloadURL
+// @updateURL      https://github.com/akoster/iitc-plugins/raw/master/player-tracker-sb.user.js
+// @downloadURL    https://github.com/akoster/iitc-plugins/raw/master/player-tracker-sb.user.js
 // @description    [iitc-2017-01-08-021732] Draw trails for the path a user took onto the map based on status messages in COMMs. Uses up to three hours of data. Does not request chat data on its own, even if that would be useful.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
@@ -22,15 +22,6 @@
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
 if(typeof window.plugin !== 'function') window.plugin = function() {};
-
-//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
-//(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20170108.21732';
-plugin_info.pluginId = 'player-tracker';
-//END PLUGIN AUTHORS NOTE
-
-
 
 // PLUGIN START ////////////////////////////////////////////////////////
 window.PLAYER_TRACKER_MAX_TIME = 6*60*60*1000; // in milliseconds
